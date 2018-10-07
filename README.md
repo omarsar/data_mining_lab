@@ -21,11 +21,9 @@ Here is a list of the required programs and libraries necessary for this lab ses
 Using an environment is to avoid some library conflict problems. You can refer this [Setup Instructions](http://cs231n.github.io/setup-instructions/) to install and setup.
 
 - [Anaconda](https://www.anaconda.com/download/) (recommended but not required)
-    - Install anaconda environment
-    
+    - Install anaconda environment  
 - [Python virtualenv](https://virtualenv.pypa.io/en/stable/userguide/) (recommended to Linux/MacOS user)
-    - Install virtual environment
-
+    - Install virtual environment  
 - [Kaggle Kernel](https://www.kaggle.com/kernels/)
     - Run on the cloud  (with some limitations)
     - Reference: [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md)
@@ -72,7 +70,7 @@ twenty_train = fetch_20newsgroups(subset='train', categories=categories, shuffle
 
 twenty_train.data[0:5]
 ```
-:shipit:: If you have some hardware problem, you can follow the [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md) to code on kaggle notebook.
+:shipit: If you have some hardware problem, you can follow the [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md) to code on kaggle notebook.
 
 ---
 ### Preview of Complete Jupyter Notebook (Coming Soon)
