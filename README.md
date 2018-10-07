@@ -4,20 +4,35 @@ This repository contains all the instructions and necessary code for Data Mining
 ---
 ### Computing Resources
 - **Operating system:** Preferably Linux or MacOS. If you have Windows, things may crash unexpectedly (try installing a virtual machine if you need to)
-- **RAM:** Minimum 8GB
-- **Disk space:** Mininium 16GB
+- **RAM:** Minimum 8 GB
+- **Disk space:** Mininium 8 GB
 
 ---
 ### Software Requirements
 In this lab session we are going to be using Python as our main programming language. If you are not familiar with it, I recommend you start with this free [Python course](https://www.codecademy.com/learn/learn-python) offered by Codecademy. 
 
 Here is a list of the required programs and libraries necessary for this lab session. (Please install them before coming to our lab session on Tuesday; this will save us a lot of time, plus these include some of the same libraries you may need for your first assignment).
-- [Python 3+](https://www.python.org/download/releases/3.0/) (Note: lab and assignment will be done strictly using Python 3)
+
+##### Language:
+- [Python 3+](https://www.python.org/download/releases/3.0/) (Note: coding will be done strictly on Python 3)
     - Install latest version of Python 3
+    
+##### Environment:
+Using an environment is to avoid some library conflict problems. You can refer this [Setup Instructions](http://cs231n.github.io/setup-instructions/) to install and setup.
+
 - [Anaconda](https://www.anaconda.com/download/) (recommended but not required)
     - Install anaconda environment
-- [Jupyter](http://jupyter.org/) Try to install the latest version and let it be compatible with your Python version. 
-    - Install jupyter
+    
+- [Python virtualenv](https://virtualenv.pypa.io/en/stable/userguide/) (recommended to Linux/MacOS user)
+    - Install virtual environment
+
+- [Kaggle Kernel](https://www.kaggle.com/kernels/)
+    - Run on the cloud  (with some limitations)
+    - Reference: [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md)
+    
+##### Necessary Libraries:
+- [Jupyter](http://jupyter.org/) (Strongly recommended but not required)
+    - Install `jupyter` and Use `$jupyter notebook` in terminal to run
 - [Scikit Learn](http://scikit-learn.org/stable/index.html)
     - Install `sklearn` latest python library
 - [Pandas](http://pandas.pydata.org/)
@@ -28,13 +43,18 @@ Here is a list of the required programs and libraries necessary for this lab ses
     - Install `maplotlib` for python
 - [Plotly](https://plot.ly/)
     - Install and signup for `plotly`
+- [Seaborn](https://seaborn.pydata.org/)
+    - Install and signup for `seaborn`
 - [NLTK](http://www.nltk.org/)
     - Install `nltk` library
+    
 ---
 ### Test script
+
 Open a jupyter notebook and run the following commands. If you have properly installed all the necessary libraries, you shouldn't have any problems running the lines of code below.
 ```python
 # import library
+%matplotlib inline
 import pandas as pd
 import numpy as np
 import nltk
@@ -43,7 +63,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 import plotly.plotly as py
 import plotly.graph_objs as go
 import math
-%matplotlib inline
 
 # prepare dataset
 categories = ['alt.atheism', 'soc.religion.christian', 'comp.graphics', 'sci.med']
@@ -51,6 +70,8 @@ twenty_train = fetch_20newsgroups(subset='train', categories=categories, shuffle
 
 twenty_train.data[0:5]
 ```
+If you have some hardware problem, you can follow the [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md) to code on kaggle notebook.
+
 ---
 ### Preview of Complete Jupyter Notebook (Coming Soon)
 
@@ -62,12 +83,3 @@ Don't worry! You will have plenty of time to learn Git before the assignment's d
 
 
 ---
-### kaggle kernels
-
-1. You need to create an account on kaggle (https://www.kaggle.com/).
-2. Go to the Kernels page (https://www.kaggle.com/kernels), click `New Kernel` and choise `Notebook`.
-3. Open the `Internet connected` in the Settings (right side).
-4. Try our `Test script` code in the Notebook and run the code in a block by `shift + enter`.
-5. If all the settings are correct, it would be like this:  
-
-![kaggle kernels](https://i.imgur.com/xQ0VuOT.png)
