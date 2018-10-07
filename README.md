@@ -55,13 +55,15 @@ Open a jupyter notebook and run the following commands. If you have properly ins
 ```python
 # import library
 %matplotlib inline
-import pandas as pd
-import numpy as np
-import nltk
+import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_20newsgroups
 from sklearn.feature_extraction.text import CountVectorizer
 import plotly.plotly as py
 import plotly.graph_objs as go
+import seaborn as sns
+import pandas as pd
+import numpy as np
+import nltk
 import math
 
 # prepare dataset
@@ -70,7 +72,7 @@ twenty_train = fetch_20newsgroups(subset='train', categories=categories, shuffle
 
 twenty_train.data[0:5]
 ```
-If you have some hardware problem, you can follow the [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md) to code on kaggle notebook.
+:shipit:: If you have some hardware problem, you can follow the [Kaggle Kernels Instructions](https://github.com/omarsar/data_mining_lab/blob/master/kagglekernel.md) to code on kaggle notebook.
 
 ---
 ### Preview of Complete Jupyter Notebook (Coming Soon)
